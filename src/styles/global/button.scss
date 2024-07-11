@@ -1,0 +1,10 @@
+.btn {
+  border: none;
+  background: #1890ff;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.3s;
+  &:hover {
+    opacity: 0.8;
+  }
+}

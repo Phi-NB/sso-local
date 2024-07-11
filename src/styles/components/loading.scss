@@ -1,0 +1,75 @@
+.loading-circle {
+  position: relative;
+  :root {
+    color-scheme: dark;
+  }
+
+  h1,
+  h2 {
+    text-align: center;
+  }
+
+  .container {
+    margin: 0 auto;
+    padding: 0 16px;
+    max-width: 1080px;
+  }
+
+  .wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 48px;
+    overflow: hidden;
+  }
+
+  .container-circle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  @keyframes rotate {
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  .loader {
+    color: var(--yellow-200);
+    height: 60px;
+    width: 60px;
+  }
+
+  .loader_animation {
+    animation: rotate 4s linear infinite;
+  }
+
+  @keyframes dash {
+    0% {
+      stroke-dasharray: 1, 150;
+      stroke-dashoffset: 0;
+    }
+
+    50% {
+      stroke-dasharray: 90, 150;
+      stroke-dashoffset: -35;
+    }
+
+    100% {
+      stroke-dasharray: 90, 150;
+      stroke-dashoffset: -125;
+    }
+  }
+
+  .loader__bg-circle {
+    color: var(--yellow-100);
+    opacity: 0.4;
+  }
+
+  .loader__circle_animation {
+    animation: dash 2s ease-in-out infinite;
+  }
+}

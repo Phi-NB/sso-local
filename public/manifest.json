@@ -1,0 +1,7 @@
+{
+  "short_name": "SA World",
+  "name": "Welcome to SA World",
+  "display": "standalone",
+  "scope": "/",
+  "description": "SA World"
+}
